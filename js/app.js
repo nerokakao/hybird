@@ -24,8 +24,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		}
 	});
 
-	$stateProvider.state("app.blogindex.id", {
-		url: "/blogindex/2",
+	$stateProvider.state("app.blog-detail", {
+		url: "/blog-detail/:id",
 		views: {
 			"menu-with-view": {
 				templateUrl: "templates/blog-detail.html",
@@ -74,13 +74,7 @@ app.controller("blog_lst_ctrl", function ($scope) {
 		{title: "angularjs ", id: 7},
 		{title: "angularjs ", id: 7},
 		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
-		{title: "angularjs ", id: 7},
+		{title: "angularjs ", id: 7}
 	];		
 });
 
