@@ -35,6 +35,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	});
 });
 
+app.controller("loading_ctrl", function ($scope, $ionicLoading) {
+	$scope.show = function () {
+		$ionicLoading.show({
+			template: "Loading ..."
+		});
+	};
+
+	$scope.hide = function () {
+		$ionicLoading.hide();
+	};
+});
+
 app.controller("app_ctrl", function ($scope, $ionicModal, $timeout) {
 
 	$scope.login_data = {};
@@ -79,4 +91,10 @@ app.controller("blog_lst_ctrl", function ($scope) {
 });
 
 
-app.controller("blog_detail_ctrl", function ($scope) {});
+app.controller("blog_detail_ctrl", function ($scope) {
+	//$scope.sleep = function (d){
+	//	for(var t = Date.now();Date.now() - t <= d;);
+	//};
+
+	//$scope.sleep(5000);
+});
